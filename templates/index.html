@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Fraudlent Transactions checker</h1>
+     <h3>If predicted value is '1' than its a fraudlent transaction and if it is '0' its a genuine transaction</h3>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="V3" placeholder="V3" required="required" />
+        <input type="text" name="V4" placeholder="V4" required="required" />
+		<input type="text" name="V7" placeholder="V10" required="required" />
+    	<input type="text" name="V10" placeholder="V10" required="required" />
+        <input type="text" name="V11" placeholder="V11" required="required" />
+		<input type="text" name="V12" placeholder="V12" required="required" />
+        <input type="text" name="V14" placeholder="V14" required="required" />
+		<input type="text" name="V16" placeholder="V16" required="required" />
+        <input type="text" name="V17" placeholder="V17" required="required" />
+		<input type="text" name="V18" placeholder="V18" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+
+ </div>
+
+
+</body>
+</html>
